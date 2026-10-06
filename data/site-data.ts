@@ -168,7 +168,76 @@ const seoService = (slug: string, label: string, title: string, detail: string, 
         : image,
   items,
   documents,
+  faqs: seoServiceFaqs[slug],
 });
+
+const seoServiceFaqs: Record<string, { q: string; a: string }[]> = {
+  "employment-visa-uae": [
+    { q: "What documents are needed for an employment visa?", a: "Usually a valid passport copy, white-background photograph, sponsor company documents and the current visa or entry stamp where applicable." },
+    { q: "Do you handle the complete employment visa process?", a: "Yes. We assist with entry permit, status change, medical typing, Emirates ID coordination, residence processing and cancellation support." },
+    { q: "Can you help if the employee is already in the UAE?", a: "Yes. We can review the current visa or entry status and explain the suitable in-country process." },
+  ],
+  "family-visa-uae": [
+    { q: "Can you process spouse, children and parent visas?", a: "Yes. We assist with family residence visa applications for spouses, children and parents, subject to the applicable requirements." },
+    { q: "Which family documents may need attestation?", a: "Marriage and birth certificates may need attestation and supporting documentation. We review the documents before submission." },
+    { q: "Do you also handle family visa renewals and cancellations?", a: "Yes. We support renewals, cancellations and related entry permit or residence visa documentation." },
+  ],
+  "residence-visa-uae": [
+    { q: "Do you assist with new residence visas and renewals?", a: "Yes. We support new applications, renewals, status changes and cancellations with the required typing and documentation." },
+    { q: "What documents are required for a residence visa?", a: "Requirements normally include a passport copy, photograph, entry permit or current visa page, sponsor documents and Emirates ID for renewals." },
+    { q: "Is Emirates ID processing included?", a: "Yes. We can coordinate Emirates ID typing and the related steps as part of the residence visa process." },
+  ],
+  "visit-visa-uae": [
+    { q: "Do you assist with 30, 60 and 90-day visit visas?", a: "Yes. We help review the suitable visit visa option for family, friends and business visitors." },
+    { q: "Can you help with a visit visa extension or status change?", a: "Yes. We assist with extensions, in-country status changes and the related application documentation where applicable." },
+    { q: "What documents are needed for a visit visa application?", a: "A visitor passport copy and photograph are generally required. Sponsor details, relationship proof or travel information may also be needed depending on the case." },
+  ],
+  "visa-renewal-uae": [
+    { q: "Which visa renewals do you handle?", a: "We assist with residence, dependent and employee visa renewals, including medical typing and Emirates ID coordination." },
+    { q: "Can you coordinate the medical and Emirates ID steps?", a: "Yes. We help arrange the required medical typing and coordinate the Emirates ID renewal steps with the visa process." },
+    { q: "What should I send for a renewal review?", a: "Send the passport copy, current visa page, Emirates ID copy, photograph and sponsor documents where applicable." },
+  ],
+  "visa-cancellation-uae": [
+    { q: "Which visa types can you cancel?", a: "We assist with employment, family and residence visa cancellations, as well as related company card procedures where required." },
+    { q: "Can you help after cancellation with transfer or exit steps?", a: "Yes. We explain the available next steps for exit, transfer or status change after reviewing the cancellation details." },
+    { q: "What documents are needed for visa cancellation?", a: "The usual documents include the passport copy, current visa page, Emirates ID copy and sponsor or company documents." },
+  ],
+  "change-status-uae": [
+    { q: "Can I change from a visit visa to a residence visa inside the UAE?", a: "In many cases an in-country status change may be possible. We review the current visa and new sponsor details before advising." },
+    { q: "Do you handle status change after visa cancellation?", a: "Yes. We assist with status change after cancellation and explain the documents and sequence required for the new visa." },
+    { q: "What documents should I provide for a status change review?", a: "Please share the passport, current visa or entry permit, new sponsor documents, photograph and previous cancellation paper if applicable." },
+  ],
+  "emirates-id-services": [
+    { q: "Do you handle new, renewal and replacement Emirates ID applications?", a: "Yes. We assist with new applications, renewals, lost ID replacements and data updates or corrections." },
+    { q: "Can you guide me on the biometrics appointment?", a: "Yes. We provide guidance on the biometrics appointment and the next steps connected with the Emirates ID application." },
+    { q: "What documents are needed for Emirates ID typing?", a: "Usually a passport copy, residence visa or entry permit, photograph and previous Emirates ID copy for renewals or replacements." },
+  ],
+  "medical-typing-uae": [
+    { q: "What medical typing services do you provide?", a: "We assist with medical fitness test typing for new residence visas, renewals and employee visa applications." },
+    { q: "Do you guide me to the approved medical centre?", a: "Yes. We explain the approved medical centre process and the next steps after the application is submitted." },
+    { q: "What should I send for medical typing?", a: "Please share the passport copy, visa page or entry permit, photograph, Emirates ID copy and sponsor details where applicable." },
+  ],
+  "corporate-pro-services-uae": [
+    { q: "Can you act as an outsourced PRO department?", a: "Yes. We support routine government procedures, employee documentation, immigration requirements and renewal tracking for UAE companies." },
+    { q: "Do you handle multiple employee visa applications?", a: "Yes. We can coordinate bulk and ongoing employee visa, medical and Emirates ID requirements for companies." },
+    { q: "What company documents are required to start?", a: "Please share the trade license, establishment card, employee passport copies, authorisation letter and company contact details." },
+  ],
+  "mainland-business-setup-uae": [
+    { q: "Can you help with the trade name, initial approval and mainland licence?", a: "Yes. We guide you through trade name reservation, initial approval, licensing, establishment card and related documentation." },
+    { q: "Do you assist with investor and partner visas?", a: "Yes. Investor and partner visa assistance can be coordinated with the mainland company setup." },
+    { q: "What documents are needed to start a mainland company setup?", a: "Usually shareholder passport copies, photographs, proposed trade names, business activity details and existing visa or Emirates ID information." },
+  ],
+  "free-zone-business-setup-uae": [
+    { q: "Can you help me choose the right free zone?", a: "Yes. We compare the suitable free zone options based on your activity, business needs and budget." },
+    { q: "Do you handle free zone formation, licensing and visas?", a: "Yes. We assist with company formation, trade licensing, establishment card, investor or employee visas and renewals." },
+    { q: "What documents are needed for free zone setup?", a: "The initial review normally needs shareholder passport copies, photographs, proposed company names, activity details and existing visa or Emirates ID information." },
+  ],
+  "trade-license-services-uae": [
+    { q: "Do you handle new, renewed and cancelled trade licences?", a: "Yes. We assist with new licences, renewals, amendments and cancellations for mainland and free zone companies." },
+    { q: "Can you help with activity changes and approvals?", a: "Yes. We review the proposed activity or amendment and guide you on the required approvals and permits." },
+    { q: "What should I send for a trade licence review?", a: "Please share the current trade licence, owner or partner passport copies, tenancy contract, proposed changes and establishment card copy." },
+  ],
+};
 
 export const seoServiceDetails: Record<string, ServiceDetail> = {
   "employment-visa-uae": seoService("employment-visa-uae", "Employment Visa UAE", "Employment Visa Services in UAE", "Complete employment visa assistance — from entry permit to residence visa stamping — for companies hiring employees and individuals starting work in the UAE.", "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2000&q=80", ["Entry Permit", "Status Change", "Medical Typing", "Emirates ID", "Residence Visa", "Visa Cancellation"], ["Passport copy (valid for 6+ months)", "Passport-size photograph (white background)", "Company trade license copy (sponsor)", "Offer letter or labour approval details", "Current visa page or entry stamp"]),
@@ -227,12 +296,12 @@ export const testimonials = [
 ];
 
 export const generalFaqs = [
-  "What services does Advanced Solutions provide?",
-  "Do you provide corporate PRO services?",
-  "Can you assist with family visas?",
-  "Do you provide MOFA attestation assistance?",
-  "Can you help with business setup?",
-  "Can I send my documents through WhatsApp?",
-  "How long does a service take?",
-  "Do you handle applications for companies with multiple employees?",
+  { q: "What services does Advanced Solutions provide?", a: "We assist with UAE visa services, PRO procedures, typing and document clearing, attestation, translation, corporate support and business setup." },
+  { q: "Do you provide corporate PRO services?", a: "Yes. We support companies with employee visa processing, immigration procedures, government applications and recurring documentation." },
+  { q: "Can you assist with family visas?", a: "Yes. We assist with spouse, children and parent residence visa applications, renewals, cancellations and related documentation." },
+  { q: "Do you provide MOFA attestation assistance?", a: "Yes. We help review documents and guide you through the applicable attestation and submission requirements." },
+  { q: "Can you help with business setup?", a: "Yes. We assist with mainland and free zone setup, trade licences, establishment documentation and investor or partner visa support." },
+  { q: "Can I send my documents through WhatsApp?", a: "Yes. You can send your initial requirement and available documents through WhatsApp for a preliminary review." },
+  { q: "How long does a service take?", a: "Timelines depend on the service, authority and individual case. We explain the expected process after reviewing your requirement." },
+  { q: "Do you handle applications for companies with multiple employees?", a: "Yes. We support bulk and ongoing employee visa, medical, Emirates ID and government documentation requirements for companies." },
 ];

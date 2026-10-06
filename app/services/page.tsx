@@ -20,7 +20,7 @@ export default function ServicesPage() {
       <Hero image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80" label="Our Services" title="Complete UAE Government & Business Solutions" description="Visa, PRO, typing, document clearing, attestation, translation and business setup services — all under one roof." />
       <ServiceGrid />
       <ProcessSection />
-      <FaqSection questions={generalFaqs} />
+      <FaqSection items={generalFaqs} />
       <CtaSection />
     </PageFrame>
   );

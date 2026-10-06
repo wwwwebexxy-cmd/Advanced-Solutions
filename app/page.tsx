@@ -33,7 +33,7 @@ export default function HomePage() {
       <ProcessSection />
       <VisaCta />
       <TestimonialsSection />
-      <FaqSection questions={generalFaqs} />
+      <FaqSection items={generalFaqs} />
       <CtaSection />
     </PageFrame>
   );
