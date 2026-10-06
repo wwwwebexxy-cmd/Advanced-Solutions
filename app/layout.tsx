@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   keywords: ["UAE government services", "visa services UAE", "PRO services UAE", "business setup UAE", "Sharjah typing services", "Emirates ID services"],
   authors: [{ name: siteName }],
   creator: siteName,
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
