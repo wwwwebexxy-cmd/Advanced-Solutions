@@ -19,6 +19,7 @@ body {
   color: var(--text);
   background: #fff;
   font-family: "Poppins", "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 h1, h2, h3, h4, .brand, .btn, .nav-links { font-family: "Montserrat", "Poppins", sans-serif; }
 a { color: inherit; text-decoration: none; }
@@ -149,7 +150,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .back-to-top { position: fixed; right: 36px; bottom: 104px; z-index: 39; width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid #d4af37; border-radius: 50%; color: var(--navy); background: var(--gold); box-shadow: 0 8px 24px #0b192c2e; cursor: pointer; transition: transform .2s, background .2s; }
 .back-to-top:hover { transform: translateY(-3px); background: #e3c34d; }
 
-.service-marquee { overflow: hidden; border-top: 1px solid #d4af3726; border-bottom: 1px solid #d4af3726; background: #060e1a; padding: 16px 0; }
+.service-marquee { width: 100%; max-width: 100vw; overflow: hidden; contain: paint; border-top: 1px solid #d4af3726; border-bottom: 1px solid #d4af3726; background: #060e1a; padding: 16px 0; }
 .service-marquee-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
 .service-marquee-item { display: flex; align-items: center; white-space: nowrap; color: #ffffffb3; font-family: "Montserrat", sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; }
 .service-marquee-item i { width: 6px; height: 6px; margin: 0 32px; display: inline-block; transform: rotate(45deg); background: var(--gold); }
@@ -505,13 +506,54 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 @media (max-width: 767px) {
+  .hero, .hero-home {
+    min-height: auto;
+    align-items: flex-start;
+    padding: 72px 0 64px;
+  }
+  .hero-home {
+    min-height: max(560px, calc(100svh - 68px));
+    padding: 72px 0 64px;
+  }
+  .hero .container-site { padding-right: 16px; padding-left: 16px; }
+  .hero .inner { width: 100%; max-width: none; min-width: 0; }
+  .hero-backdrop { background-position: center center; animation: none; }
+  .hero-overlay { background: linear-gradient(180deg, #060e1ae6 0%, #0b192cd9 58%, #0b192cf2 100%); }
+  .hero h1 {
+    max-width: none;
+    font-size: clamp(32px, 8vw, 42px);
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+  .hero:not(.hero-home) h1 { font-size: clamp(30px, 8vw, 38px); }
+  .hero p { max-width: none; margin: 0; font-size: 16px; line-height: 1.6; }
+  .hero .actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 28px;
+  }
+  .hero .actions .btn { width: 100%; min-height: 52px; }
+  .hero-trust { margin-top: 28px; gap: 8px 12px; font-size: 12px; line-height: 1.4; }
+  .crumb { flex-wrap: wrap; row-gap: 4px; }
+  .service-marquee { padding: 13px 0; }
+  .service-marquee-track { animation-duration: 42s; }
+  .service-marquee-item { font-size: 11px; letter-spacing: .16em; }
+  .service-marquee-item i { width: 5px; height: 5px; margin: 0 20px; }
   .hero:not(.hero-home) { padding: 64px 0; }
-  .hero:not(.hero-home) h1 { font-size: 32px; }
-  .hero:not(.hero-home) p { font-size: 16px; }
-  .hero-home h1 { font-size: 38px; }
   .service-overview-section { padding: 56px 0 72px; }
   .service-section-heading h2, .service-process-title { font-size: 26px; }
   .faq-section .title { font-size: 32px; }
   .cta h2 { font-size: 35px; }
   .cta p { font-size: 16px; }
+}
+
+@media (max-width: 380px) {
+  .hero, .hero-home { padding: 56px 0 52px; }
+  .hero:not(.hero-home) { padding: 52px 0; }
+  .hero h1 { font-size: clamp(30px, 9vw, 34px); }
+  .hero p { font-size: 15px; }
+  .hero-eyebrow { gap: 8px; font-size: 11px; letter-spacing: .2em; }
+  .hero-eyebrow .eyebrow-line { width: 24px; }
+  .hero-trust { gap: 6px 10px; font-size: 11px; }
 }
