@@ -14,7 +14,6 @@ export function Hero({ label, title, description, home = false, image }: HeroPro
   return (
     <section className={`hero ${home ? "hero-home" : ""}`}>
       <div className="hero-backdrop" style={{ backgroundImage: `url("${backgroundImage}")` }} aria-hidden="true" />
-      <div className="hero-overlay" aria-hidden="true" />
       <div className="container-site">
         <div className="inner">
           <div className="eyebrow hero-eyebrow"><span className="eyebrow-line" />{label}</div>

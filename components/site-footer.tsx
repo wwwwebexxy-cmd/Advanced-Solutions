@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MessageCircle, Phone } from "lucide-react";
+import { SiFacebook, SiInstagram } from "react-icons/si";
 import { Brand } from "./brand";
 import { WhatsAppFloat } from "./whatsapp-float";
 
@@ -11,8 +12,8 @@ export function SiteFooter() {
           <div className="footer-grid">
             <div>
               <Brand dark />
-              <h3 className="gold">Clearing the Path<br />to Your Success...</h3>
-              <p>Professional UAE government and business services for individuals, families and companies.</p>
+              <h3 className="footer-tagline">TYPING AND<br />DOCUMENT CLEARING</h3>
+              <p>Professional UAE typing, document clearing, government and business services for individuals, families and companies.</p>
             </div>
             <div>
               <h4>SERVICES</h4>
@@ -30,12 +31,32 @@ export function SiteFooter() {
               <Link href="/services">Services</Link>
               <Link href="/contact">Contact</Link>
             </div>
-            <div>
+            <div className="footer-contact">
               <h4>CONTACT</h4>
-              <p><MapPin size={15} /> &nbsp; Sharjah, UAE</p>
-              <p><Phone size={15} /> &nbsp; +971 52 346 6554</p>
-              <p><MessageCircle size={15} /> &nbsp; +971 52 346 6554</p>
-              <p><Mail size={15} /> &nbsp; info@advancedsolutions.ae</p>
+              <div className="footer-addresses">
+                <div className="footer-address">
+                  <strong>SHARJAH</strong>
+                  <p>P.O Box 515354<br />King Abdulaziz Street,<br />Al Bu Dani Shop No. 1,<br />Near Mega Mall, Sharjah-UAE</p>
+                </div>
+                <div className="footer-address">
+                  <strong>DUBAI</strong>
+                  <p>Sheikha Mehra Building<br />M-Floor, 116, Office Number-1<br />Al Tawar, Al Qusais, Dubai</p>
+                </div>
+              </div>
+              <div className="footer-contact-links">
+                <a href="tel:+97167020888"><Phone size={15} /> +971 67 02 0888</a>
+                <a href="tel:+971523466554"><Phone size={15} /> +971 52 346 6554</a>
+                <a href="https://wa.me/971523521448"><MessageCircle size={15} /> +971 52 352 1448</a>
+                <a href="mailto:advancedsolutionspro@gmail.com"><Mail size={15} /> advancedsolutionspro@gmail.com</a>
+              </div>
+              <div className="footer-socials" aria-label="Social media links">
+                <a href="https://www.instagram.com/advanced_solutions_sharjah?stkn=azNqYzE1bXJlMTEw&utm_source=qr" aria-label="Instagram" title="Instagram">
+                  <SiInstagram aria-hidden="true" />
+                </a>
+                <a href="https://www.facebook.com/share/1HfRk9VJ4i/?mibextid=wwXIfr" aria-label="Facebook" title="Facebook">
+                  <SiFacebook aria-hidden="true" />
+                </a>
+              </div>
             </div>
           </div>
           <div className="copyright"><span>© 2026 Advanced Solutions. All rights reserved.</span><span className="footer-legal"><span>Privacy Policy</span><span>Terms of Service</span></span></div>

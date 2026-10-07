@@ -5,7 +5,6 @@ export function CtaSection() {
   return (
     <section className="cta" id="contact-cta">
       <div className="cta-backdrop" aria-hidden="true" />
-      <div className="cta-overlay" aria-hidden="true" />
       <div className="container-site cta-content">
         <div className="eyebrow">We Are Ready When You Are</div>
         <h2>Need Assistance With a UAE Service?</h2>
